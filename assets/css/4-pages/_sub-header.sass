@@ -1,0 +1,39 @@
+.alt-sub-header
+  +display(flex)
+  +justify-content(space-between)
+
+  .left-wrap
+    .text-wrap
+      +display(flex)
+      +flex-direction(column)
+      +justify-content(center)
+      +align-items(center)
+
+      h1
+        color: $header-color
+        text-transform: uppercase
+
+        span
+          border-top: 5px solid $header-color
+          border-bottom: 5px solid $header-color
+
+      .kicker
+        color: $kicker-color
+        text-transform: uppercase
+        line-height: 1.02
+        font-weight: bold
+
+  .right-wrap
+    text-align: center
+    h1
+      color: $header-color
+      text-transform: uppercase
+      transform: rotate(180deg)
+
+      span
+        border-top: 5px solid $header-color
+        border-bottom: 5px solid $header-color
+
+  .center-wrap
+    background-position: top -110px center
+    // top: 110px
