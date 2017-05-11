@@ -1,0 +1,72 @@
+.alt-footer
+  +display(flex)
+  +justify-content(space-between)
+  background-color: $nav-bg
+  width: 100%
+  height: 110px
+  .left-wrap
+    +display(flex)
+    +justify-content(space-between)
+    +align-items(center)
+    .logo-wrap
+      +size(50px)
+      margin-left: 30px
+      .logo
+        +size(50px)
+        background-image: url(../img/logo.jpg)
+        background-size: cover
+    nav
+      margin-right: 30px
+      a
+        color: $bg-color
+        font-size: 18px
+        text-transform: uppercase
+        font-weight: bold
+
+  .right-wrap
+    +display(flex)
+    // +justify-content(space-between)
+    +align-items(center)
+    .right-nav
+      width: 100%
+      +display(flex)
+      +justify-content(space-between)
+      a
+        color: $bg-color
+        font-size: 18px
+        text-transform: uppercase
+        font-weight: bold
+        margin: 0 30px
+
+        &:nth-child(1)
+          display: none
+
+  .center-wrap
+    background-position: top -530px center
+
+@media screen and (max-width: 875px)
+  .alt-footer
+    .left-wrap
+      width: 50%
+      .left-nav
+        a
+          display: none
+    .center-wrap
+      display: none
+    .right-wrap
+      width: 50%
+      .right-nav
+        +justify-content(flex-end)
+        a
+          margin: 0 30px 0 0
+
+          &:nth-child(1)
+            display: inline-block
+
+@media screen and (max-width: 460px)
+  .alt-footer
+    .right-wrap
+      .right-nav
+        a
+          font-size: 14px
+          margin: 0 10px 0 0
